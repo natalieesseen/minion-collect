@@ -1,5 +1,6 @@
 import { useMinions } from "../lib/hooks";
 import { LOAD_LIMIT } from "../lib/constants";
+import Card from "./Card";
 
 function Minions() {
   const { minions } = useMinions();
@@ -8,9 +9,7 @@ function Minions() {
     <>
       <ul>
         {minions.slice(0, LOAD_LIMIT).map(minion => (
-          <li key={minion.id}>
-            {minion.name}
-          </li>
+          <Card minion={minion} key={minion.id} />
         ))}
       </ul>
     </>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { fetchMinions } from '../utils/fetchMinions';
 
-interface Minion {
+export interface Minion {
   id: number;
   name: string;
   description: string;
